@@ -1,0 +1,14 @@
+{
+  "name": "next-mono",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Anto",
+  "license": "ISC",
+  "devDependencies": {
+    "next-transpile-modules": "^9.0.0"
+  }
+}
