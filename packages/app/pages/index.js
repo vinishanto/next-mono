@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import { Hello } from 'components/components/Hello'
+import TestSass from '../components/testSass'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       
       <main>
         <Hello></Hello>
+        <TestSass/>
       </main> 
 
       <footer className={styles.footer}>
