@@ -1,0 +1,106 @@
+$px: 1px;
+$percent: 1 / 100;
+$one-of-12-columns: 8.33333333%;
+
+$time-second: 1s;
+$spinner-time: 0.8 * $time-second;
+
+$break-xsmall: 320px;
+$break-smaller: 449px;
+$break-small: 544px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
+$general-font-size: 16;
+$general-letter-spacing: normal;
+$general-vertical-margin: 12 * $px;
+$general-list-padding: 1.1em;
+$general-column-gap: 1em;
+$general-carousel-transition-duration: $time-second * 50 * $percent;
+$general-accordion-transition-duration: $time-second * 10 * $percent;
+$general-header-transition-duration: $time-second * 20 * $percent;
+$footer-symbol: 30 * $px;
+
+$spacing-tiny: .2em;
+$spacing-small: 1em;
+$spacing-medium: 2em;
+$spacing-large: 3em;
+
+$border-radius-small: 4px;
+$border-radius-medium: 10px;
+$border-radius-large: 16px;
+
+$border-small: 1px;
+$border-medium: 2px;
+$border-large: 3px;
+
+
+$font-family: dr-icons;
+
+$star-empty: "\ea4f";
+$star-full: "\ea50";
+$star-half: "\ea51";
+$star-one-quarter: "\ea52";
+$star-three-quarters: "\ea53";
+$carousel-button-color: #f09619;
+
+$color-primary-very-dark: #0e1e6c;
+$color-primary-darkest: #154187;
+$color-primary-darker: #2158a6;
+$color-primary-dark: #3080c9;
+$color-primary: #00adee;
+$color-primary-light: #56c3f2;
+$color-primary-lighter: #8fd5fa;
+$color-primary-lightest: #b7e8fe;
+$color-primary-very-light: #e3f8ff;
+
+$color-secondary-very-dark: #d25607;
+$color-secondary-darkest: #e1630a;
+$color-secondary-darker: #e1720b;
+$color-secondary-dark: #e0880d;
+$color-secondary: #f09619;
+$color-secondary-light: #f3ba53;
+$color-secondary-lighter: #f5ce77;
+$color-secondary-lightest: #f9e1a2;
+$color-secondary-very-light: #fbf2d0;
+
+$color-dark: #000;
+$color-neutral-very-dark: #2a3340;
+$color-neutral-darkest: #474b51;
+$color-neutral-darker: #858b92;
+$color-neutral-dark: #abb2bc;
+$color-neutral: #cdd1d7;
+$color-neutral-light: #dcdfe3;
+$color-neutral-lighter: #e7eaed;
+$color-neutral-lightest: #eff1f3;
+$color-neutral-very-light: #f7f8f9;
+$color-light: #fff;
+
+$color-error: #ed2724;
+$color-error-dark: darken($color-error, 26.5%);
+$color-error-light: lighten($color-error, 26.5%);
+$color-error-very-light: lighten($color-error, 43%);
+
+$color-info: #3080c9;
+$color-info-light: #8fd5fa;
+$color-info-very-light: #e3f8ff;
+
+$color-success: #49c518;
+$color-success-light: lighten($color-success, 30%);
+$color-success-very-light: lighten($color-success, 53%);
+
+$color-warning: #f2b017;
+$color-warning-light: #f9e68f;
+$color-warning-very-light: #fdfce4;
+
+$menu-height: 60px;
+$table-border-radius: 4px;
+
+$radio-gradient-inner: 39%;
+$radio-gradient-outer: 58%;
+$radio-gradient-smoothness: 2%;
+
+$icons-root: '../../icons/Drafty-';
+$icons-font-family: 'dr-icons';
+//$icons-font-family: 'dr-icons', 'icomoon', 'iconmonstr-iconic-font';

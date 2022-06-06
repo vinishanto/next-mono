@@ -1,0 +1,328 @@
+// @import url('./_variables.scss');
+$color-neutral-darkest: #474b51;
+header {
+  //border-bottom: 2px solid transparentize($color-neutral-very-dark, 0.9);
+  position: sticky;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 4px 4px -4px $color-neutral-darkest;
+  top: 0;
+  background-color: $color-light;
+}
+
+// main {
+//   padding-top: $menu-height;
+//   @media (min-width: $break-small) and (max-width: $break-xlarge) {
+//     padding-top: 40px;
+//   }
+// }
+
+.browser-error {
+  background: $color-error;
+  color: $color-error-very-light;
+  margin: 0 -15px;
+  text-align: center;
+
+  > span {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+}
+
+.icon {
+  display: inline;
+  font-family: $icons-font-family;
+  font-size: 100%;
+  font-weight: normal;
+  margin-right: 0.5em;
+
+  @media (max-width: $break-medium) {
+    margin-right: 1em;
+  }
+}
+
+nav {
+  background: $color-light;
+  box-shadow: -50vw 0 0 $color-light, 50vw 0 0 $color-light;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+      padding-left: 0;
+      white-space: nowrap;
+    }
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: $menu-height;
+    overflow: visible;
+
+    > li {
+      margin: 0;
+      min-height: $menu-height;
+      padding: 0;
+      padding-left: 0;
+
+      &:not(:last-of-type) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .logo {
+    margin-left: -15px;
+    min-width: 120px;
+
+    a {
+      display: block;
+      height: $menu-height;
+      padding-left: 15px;
+      text-decoration: none;
+      padding-top: 10px;
+
+      img {
+        height: 45px;
+        width: auto;
+      }
+      span {
+        color: $color-primary;
+        font-family: $icons-font-family;
+        font-size: 45px;
+        font-weight: normal;
+        height: $menu-height;
+        line-height: $menu-height;
+        padding: 0;
+      }
+    }
+  }
+
+  .links {
+    width: 100%;
+
+    > ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+
+      @media (max-width: $break-large) {
+        justify-content: space-between;
+      }
+    }
+
+    li {
+      height: $menu-height;
+      line-height: $menu-height;
+
+      &:not(:last-of-type) {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width: $break-medium) {
+      display: none;
+    }
+
+    a[role='button'] {
+      white-space: nowrap;
+    }
+  }
+
+  .drop-down {
+    display: none;
+    margin-right: -12px;
+    max-width: $menu-height;
+    min-width: $menu-height;
+
+    summary {
+      font-size: 0;
+      text-align: center;
+
+      span {
+        font-family: $icons-font-family;
+        font-size: 30px;
+        font-weight: normal;
+        height: $menu-height;
+        line-height: $menu-height;
+      }
+
+      .icon-close {
+        display: none;
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: $color-primary;
+        cursor: pointer;
+      }
+
+      &:focus {
+        background: transparentize($color-neutral, 0.85);
+        box-shadow: 0 0 0 2px transparentize($color-neutral, 0.7);
+      }
+    }
+
+    ul {
+      margin-left: calc(-100vw + 75px);
+      width: calc(100vw - 30px);
+    }
+
+    @media (max-width: $break-medium) {
+      display: block;
+    }
+  }
+
+  details {
+    &[open] {
+      .icon-open {
+        display: none;
+        font-size: 16px;
+      }
+
+      .icon-close {
+        display: inline;
+      }
+    }
+  }
+
+  .menu-links {
+    a {
+      color: $color-neutral-very-dark;
+      font-size: 16px;
+
+      font-weight: 500;
+      text-decoration: none;
+
+      &:not([role='button']) {
+        display: block;
+        height: $menu-height;
+        line-height: $menu-height;
+        padding: 0 1em;
+
+        @media (max-width: $break-large) and (min-width: $break-medium + 1px) {
+          padding: 0;
+        }
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    li {
+      &:last-of-type {
+        margin-left: 15px;
+      }
+    }
+
+    &.drop {
+      padding: 1.5em 0;
+
+      a {
+        &:not([role='button']) {
+          height: $menu-height - 10px;
+          line-height: $menu-height - 10px;
+        }
+      }
+
+      li {
+        &:last-of-type {
+          margin: 2em 0;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .sub-menu {
+    position: relative;
+    summary{
+      color: $color-neutral-very-dark;
+      font-weight: 500;
+      padding: 0 1em;
+      font-size: 16px;
+      text-align: left;
+      height: 50px;
+      line-height: 50px;
+      position: relative;
+      @media (min-width: $break-medium) {
+        height: 60px;
+        line-height: 60px;
+        padding-right: 25px;
+      }
+      &::marker {
+        content: "";
+      }
+      &::-webkit-details-marker {
+        display: none;
+      }
+      &::before {
+        content: "\ea06";
+        font-family: "dr-icons";
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        //transform: rotate(180deg);
+        transition: all .5s ease-in-out;
+        @media (min-width: $break-medium) {
+          font-size: 20px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        color: $color-primary;
+      }
+      &:focus {
+        background: transparentize($color-neutral, 0.85);
+        box-shadow: 0 0 0 2px transparentize($color-neutral, 0.7);
+
+      }
+    }
+    details[open] summary::before{
+      transform: rotate(-180deg);
+      transition: all .5s ease-in-out;
+    }
+    .sub-menu-drop {
+      position: inherit;
+      top: 62px;
+      margin-left: 0;
+      @media (min-width: $break-medium) {
+        position: absolute;
+        background-color: $color-light; 
+        border-radius: 6px;
+        left: -26px;
+        width: 200px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        box-shadow: 0 2px 6px $color-neutral-light;
+        li {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+      li:last-of-type {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      li:not(:last-of-type) {
+        padding-bottom: 0;
+      }
+      a:not([role='button']) {
+        font-weight: 300;
+        padding-left: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+
+}
