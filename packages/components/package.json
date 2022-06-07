@@ -2,20 +2,33 @@
   "name": "components",
   "version": "0.1.0",
   "private": true,
-  "main": "pages/index",
+  "main": "components/index",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "next": "12.1.6",
+    "react": "18.1.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "18.1.0"
+  },
+  "peerDependencies": {
     "react": "18.1.0",
     "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/user-event": "^14.2.0",
+    "jest": "28.1.0",
+    "jest-environment-jsdom": "28.1.0",
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^12.1.6"
   }
 }

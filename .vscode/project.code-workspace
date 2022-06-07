@@ -1,0 +1,25 @@
+{
+    "folders": [
+      {
+        "name": "👑 Root",
+        "path": "../",
+        "jest.autoEnable": false
+      },
+      {
+        "name": "📚 Library",
+        "path": "../packages/components"
+      },
+      {
+        "name": "📱 Drafty",
+        "path": "../packages/Drafty"
+      },
+      {
+        "name": "📃 Documents",
+        "path": "../packages/documents"
+      },
+    ],
+    "settings": {
+      "jest.autoEnable": false,
+      "jest.disabledWorkspaceFolders": ["👑 Root", "📃 Documents", "📱 Drafty"]
+    }
+  }
