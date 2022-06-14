@@ -1,6 +1,8 @@
 export {
     Row,
-    Col
+    Col,
+    Button,
+    Form,
 } from 'react-bootstrap';
 
 import PropTypes from 'prop-types';

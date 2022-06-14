@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import {Container} from './index'
+import {Container} from '../Bootstrap'
 
 describe('Custom Container', () => {
     it('should render the container with the children', () => {

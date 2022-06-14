@@ -104,3 +104,82 @@ $radio-gradient-smoothness: 2%;
 $icons-root: '../../icons/Drafty-';
 $icons-font-family: 'dr-icons';
 //$icons-font-family: 'dr-icons', 'icomoon', 'iconmonstr-iconic-font';
+
+
+// Mixins 
+@mixin set-font($font-size, $line-height, $letter-spacing, $font-weight) {
+    font-size: $font-size * $px;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    margin: 0;
+  }
+
+  @mixin set-button($background, $color, $fake-background) {
+    background: $fake-background;
+    box-shadow: inset 0 0 0 100vw $background;
+    overflow: hidden;
+  
+    > span,
+    &::after,
+    &::before {
+      color: $color;
+    }
+  }
+  
+  @mixin set-button-with-border($border-color, $background, $color, $fake-background: $color-dark) {
+    @include set-button($background, $color, $fake-background);
+  
+    background-image: linear-gradient(to right, $background 5px, $fake-background 5px, $fake-background calc(100% - 5px), $background calc(100% - 5px));
+    border-color: $border-color;
+  }
+  
+  @mixin set-button-hover($background, $color) {
+    &:hover {
+      background: $background;
+  
+      > span,
+      &::after,
+      &::before {
+        color: $color;
+      }
+    }
+  }
+  
+  @mixin set-button-hover-with-border($border-color, $background, $color) {
+    @include set-button-hover($background, $color);
+  
+    &:hover {
+      border-color: $border-color;
+    }
+  }
+  
+  @mixin set-button-disabled($background, $color) {
+    &[aria-disabled='true'] {
+      background: $background;
+  
+      > span,
+      &::after,
+      &::before {
+        color: $color;
+      }
+    }
+  }
+  
+  @mixin set-button-disabled-with-border($border-color, $background, $color) {
+    @include set-button-disabled($background, $color);
+  
+    &[aria-disabled='true'] {
+      border-color: $border-color;
+    }
+  }
+  
+  @mixin set-button-focus {
+    &:focus {
+      &:not([aria-disabled='true']) {
+        box-shadow: 0 0 0 4px $color-neutral-light;
+        outline: none;
+      }
+    }
+  }
+  

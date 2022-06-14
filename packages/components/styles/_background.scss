@@ -1,0 +1,25 @@
+.bg-grad-primary-darker {
+    background: linear-gradient(to right, $color-primary-darker 5%, $color-primary-dark 95%);
+  }
+  .bg-grad-primary-dark {
+    background: linear-gradient(to right, $color-primary 5%, $color-primary-dark 95%);
+  }
+  .bg-grad-primary-dark-reverse {
+    background: linear-gradient(to left, $color-primary 5%, $color-primary-dark 95%);
+  }
+  
+  .bg-grad-primary-light {
+    background: linear-gradient(to right, $color-primary-light 5%, $color-primary 95%);
+  }
+  
+  .bg-grad-primary-secondary {
+    background: linear-gradient(to right, $color-primary 5%, $color-secondary 95%);
+  }
+  
+  .bg-grad-secondary-dark {
+    background: linear-gradient(to right, $color-secondary-darker 5%, $color-secondary 95%);
+  }
+  
+  .bg-grad-secondary-light {
+    background: linear-gradient(to right, $color-secondary-light 5%, $color-secondary 95%);
+  }

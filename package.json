@@ -10,5 +10,16 @@
   "license": "ISC",
   "devDependencies": {
     "next-transpile-modules": "^9.0.0"
+  },
+  "scripts": {
+    "dev:Drafty": "yarn --cwd packages/Drafty dev",
+    "build:Drafty": "yarn --cwd packages/Drafty build",
+    "test:Drafty": "yarn --cwd packages/Drafty test",
+
+    "dev:components": "yarn --cwd packages/components dev",
+    "build:components": "yarn --cwd packages/components build",
+    "test:components": "yarn --cwd packages/components test",
+
+    "start:documents": "yarn --cwd packages/documents start"
   }
 }
