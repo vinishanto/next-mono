@@ -16,6 +16,11 @@ FE server -->>- Browser : Server Rendered page
 Browser ->>+ FE CDN : Requests assets
 FE CDN -->>- Browser : assets are served 
 
+Browser ->>+ BFF : Requests Dynamic data via Ajax
+BFF -->- Browser : Responds with dynamic data as json
+
+Browser ->> Browser : incorporates the dynamic data and present the UI
+
 ```
 
 ## Target FE
@@ -28,10 +33,9 @@ sequenceDiagram
 Pipeline ->> Build Env : starts the build/Deploy
 
 loop for every pages
-    Build Env ->>+ Liferay : Get CMS page info
-    Liferay -->>- Build Env : CMS page info
+    Build Env ->>+ Build Env : Get Nextjs template
     Build Env ->> Build Env : Get static data from config
-    Build Env ->> Build Env : render the page with static data and CMS page data
+    Build Env ->> Build Env : render the page with static data and the NextJs template
 end
 
 Build Env ->>+ FE CDN : uploads Pregenerated pages in CDN
@@ -47,5 +51,10 @@ Browser ->>+ FE CDN : Request for a page
 FE CDN -->>- Browser : Responds the Pregenerated page
 Browser ->>+ FE CDN : Requests assets
 FE CDN -->>- Browser : assets are served 
+
+Browser ->>+ BFF : Requests Dynamic data via Ajax
+BFF -->- Browser : Responds with dynamic data as json
+
+Browser ->> Browser : incorporates the dynamic data and present the UI
 
 ```
